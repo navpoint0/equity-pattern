@@ -1,1 +1,1 @@
-# equity-pattern
+# equity-patterns
