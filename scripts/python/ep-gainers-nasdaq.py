@@ -43,7 +43,7 @@ print 'NASDAQ gainers parsed: %d' % len(stocks)
 
 con = None
 try:
-    con = psycopg2.connect(database='equities', user='postgres', host='localhost', password='b10bubb@')
+    con = psycopg2.connect(database='equities', user='postgres', host='localhost', password='pa55w0rd')
     cur = con.cursor()
     for stock in stocks:
         cur.execute("INSERT INTO equities.stock_master (id, index, ticker, tracking_date, initial_direction) VALUES (DEFAULT, 'NASDAQ', %s, CURRENT_DATE, 'U') RETURNING id", (stock.symbol,))
